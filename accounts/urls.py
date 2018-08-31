@@ -2,7 +2,6 @@
 from django.urls import path
 
 from . import views
-from bookshop.urls import urlpatterns
 
 app_name = 'accounts'
 urlpatterns = [

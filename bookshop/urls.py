@@ -19,9 +19,8 @@ from django.views.generic import RedirectView # 20180830 18:37
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('account/', include('account.urls')),
     # 20180830 18:34
+    path('', RedirectView.as_view(url='accounts/login/')),
+    path('accounts/', include('accounts.urls')),
     path('shop/', include('shop.urls')),
-    # 20180830 18:34
-    path('', RedirectView.as_view(url='account/login/')),
 ]
